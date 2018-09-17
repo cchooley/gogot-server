@@ -1,3 +1,5 @@
+const authUtils = require('../utils/auth')
+
 exports.seed = function (knex, Promise) {
   return knex('player').del().then(() => {
     return knex('player').insert([{
@@ -5,7 +7,7 @@ exports.seed = function (knex, Promise) {
       name: 'Conor Hooley',
       aka: 'Hooleyfinger',
       email: 'conor@hotmail.com',
-      password: 'one',
+      password: authUtils.hashPassword('one'),
       image: 'img1.jpg',
       picksMade: 0,
       active: true
@@ -15,7 +17,7 @@ exports.seed = function (knex, Promise) {
       name: 'Brady Smith',
       aka: 'Lord Dumbbeard',
       email: 'brady@hotmail.com',
-      password: 'two',
+      password: authUtils.hashPassword('two'),
       image: 'img1.jpg',
       picksMade: 0,
       active: true
@@ -25,7 +27,7 @@ exports.seed = function (knex, Promise) {
       name: 'Stasia Vinnedge',
       aka: 'Stable Stasia',
       email: 'stasia@hotmail.com',
-      password: 'three',
+      password: authUtils.hashPassword('three'),
       image: 'img1.jpg',
       picksMade: 0,
       active: true
