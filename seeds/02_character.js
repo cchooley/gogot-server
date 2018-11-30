@@ -10,7 +10,8 @@ exports.seed = function (knex, Promise) {
         playedBy: 'Gwendoline Christie',
         eligible: true,
         timesPicked: 0,
-        image: 'https://tinyurl.com/y8dcb258',
+        avatar: 'https://tinyurl.com/y8dcb258',
+        proPic: 'https://tinyurl.com/y8pq2dkt'
       },
       {
         id: 2,
@@ -22,7 +23,8 @@ exports.seed = function (knex, Promise) {
         playedBy: 'Rory McCann',
         eligible: true,
         timesPicked: 0,
-        image: 'https://tinyurl.com/y8yl2xrw',
+        avatar: 'https://tinyurl.com/y8yl2xrw',
+        proPic: 'https://tinyurl.com/ybhhqt6h'
       },
       {
         id: 3,
@@ -34,7 +36,8 @@ exports.seed = function (knex, Promise) {
         playedBy: 'Jerome Flynn',
         eligible: true,
         timesPicked: 0,
-        image: 'https://pm1.narvii.com/6364/646e420104989f1ef03bbd4fd0c7e4667bb3bf20_128.jpg',
+        avatar: 'https://tinyurl.com/ycyaadtg',
+        proPic: 'https://tinyurl.com/ydxjahgg'
       }
     ]);
   }).then(() => {
