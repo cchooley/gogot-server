@@ -8,14 +8,16 @@ const characters = require('./routes/characters')
 const players = require('./routes/players')
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
 app.use(bodyParser.json());
 app.use(require("body-parser").text());
 app.use(cors())
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'GOGOT database'
+    message: 'Check out this GOGOT database'
   })
 })
 
