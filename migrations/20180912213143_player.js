@@ -1,13 +1,13 @@
 exports.up = function (knex, Promise) {
     return knex.schema.createTable('player', (table) => {
         table.increments('id').primary(),
-        table.text('name'),
-        table.text('aka'),
-        table.string('email'),
-        table.string('password'),
-        table.integer('picksMade'),
-        table.boolean('active'),
-        table.string('image')
+            table.text('name'),
+            table.text('aka'),
+            table.string('email'),
+            table.string('password'),
+            table.integer('picksMade'),
+            table.boolean('active'),
+            table.string('image')
     });
 };
 
