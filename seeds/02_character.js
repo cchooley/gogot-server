@@ -63,6 +63,37 @@ exports.seed = function (knex, Promise) {
         timesPicked: 0,
         avatar: 'https://tinyurl.com/ybbor4fv',
         proPic: 'https://tinyurl.com/yc6m4q4h'
+      },
+      {
+        id: 7,
+        name: 'Sansa Stark',
+        aka: 'Little Dove, Little Bird, Sansa Lannister, Sansa Bolton, Alayne, Lady Stark, Lady Bolton',
+        playedBy: 'Sophie Turner',
+        eligible: true,
+        alive: true,
+        timesPicked: 0,
+        avatar: 'https://tinyurl.com/y9bj5k2p',
+        proPic: 'https://tinyurl.com/yc5c3kgn'
+      }, {
+        id: 8,
+        name: 'Bran Stark',
+        aka: 'The Three-Eyed Raven, Little Lord',
+        playedBy: 'Isaac Hempstead-Wright',
+        eligible: true,
+        alive: true,
+        timesPicked: 0,
+        avatar: 'https://tinyurl.com/yafwuujj',
+        proPic: 'https://tinyurl.com/y7zy23uu'
+      }, {
+        id: 9,
+        name: 'Cersei Lannister',
+        aka: 'Queen of the Andals and the First Men, Protector of the Seven Kingdoms, Lady of Casterly Rock, Lady Paramount of the Westerlands, Wardeness of the West, Queen Mother, Queen Regent, Queen Consort, Cersei the Lioness, The Mother of Madness',
+        playedBy: 'Lena Headey',
+        eligible: true,
+        alive: true,
+        timesPicked: 0,
+        avatar: 'https://tinyurl.com/y8ampska',
+        proPic: 'https://tinyurl.com/ydgu9kob'
       }
     ]);
   }).then(() => {

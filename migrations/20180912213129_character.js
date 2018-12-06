@@ -3,7 +3,6 @@ exports.up = function (knex, Promise) {
         table.increments('id').primary(),
             table.text('name'),
             table.text('aka'),
-            table.text('gender'),
             table.text('playedBy'),
             table.integer('timesPicked'),
             table.boolean('eligible'),
