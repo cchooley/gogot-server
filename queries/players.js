@@ -7,6 +7,9 @@ module.exports = {
     read(id) {
         return database('player').select().where('id', id).first()
     },
+    getPlayerByEmail(email) {
+        return database('player').select().where('email', email).first()
+    },
     create(player) {
         return database('player').insert(player).returning('*').then(record => record[0])
     },
