@@ -6,6 +6,7 @@ const app = express();
 
 const characters = require('./routes/characters')
 const players = require('./routes/players')
+const auth = require('./routes/auth')
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 
 app.use('/characters', characters)
 app.use('/players', players)
+app.use('/auth', auth)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

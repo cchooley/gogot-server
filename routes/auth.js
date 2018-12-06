@@ -22,9 +22,13 @@ router.post('/login', function (req, res, next) {
             const passwordMatch = authUtils.comparePassword(req.body.password, player.password)
             if (passwordMatch) {
                 const token = authUtils.createJWT(player)
-                res.json({ token })
+                res.json({
+                    token
+                })
             } else {
-                res.json({ error: 'Incorrect password' })
+                res.json({
+                    error: 'Incorrect password'
+                })
             }
 
         })
@@ -34,9 +38,10 @@ router.post('/register', function (req, res, next) {
     queries.create(req.body)
         .then(player => {
             const token = authUtils.createJWT(player)
-            res.json({ token })
-        }
-        )
+            res.json({
+                token
+            })
+        })
 })
 
 module.exports = router;
