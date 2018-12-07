@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -18,7 +20,7 @@ app.use(cors())
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Check out this GOGOT database'
+    message: 'GOGOT database'
   })
 })
 
@@ -37,9 +39,9 @@ app.use(function (err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  // // render the error page
+  // res.status(err.status || 500);
+  // res.render('error');
 });
 
 module.exports = app;
