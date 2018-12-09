@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const authUtils = require('../utils/auth');
 
 const queries = require('../queries/players');
 
@@ -31,6 +32,11 @@ router.get('/:id', (request, response, next) => {
 router.post('/', (request, response, next) => {
   queries.create(request.body)
     .then(player => {
+      const token = authUtils.createJWT(player);
+      response.json({
+        token,
+        player
+      });
       response.status(201).json({
         player
       });
